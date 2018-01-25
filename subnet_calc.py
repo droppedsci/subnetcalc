@@ -1,9 +1,9 @@
-network_block = "144.174.11.0/24" # network_block assignment type(str)
+network_block = "x.x.11.0/24" # network_block assignment type(str)
 subnet_mask = 26 #subnet mask assignment type(int)
 
 # Split the network block into IP addresses and network masks
 
-ip_address = network_block.split("/")[0] # splits the network_block variable into ip address and CIDR notation. Assigns 144.174.11.0 to variable
+ip_address = network_block.split("/")[0] # splits the network_block variable into ip address and CIDR notation. Assigns x.x.11.0 to variable
 network_mask = int(network_block.split("/")[1]) # takes the CIDR notation from the network_block variable and gives it a new assignment and type
 octets = ip_address.split(".") # takes the IP address and removes the period and separates it into ['144','174','11','0']
 
@@ -29,7 +29,7 @@ for each_subnet in range(0,number_of_subnets):     #variables each_subnet and nu
     octets[subnet_octet] = str(subnetwork_address)  # sets octets[subnet_octect] to a string value of 0 and tells the for loop to only update the last octet in the IP 
     subnets = ".".join(octets) + "/" + str(subnet_mask) # joins the IP address with periods and adds the CIDR value when output is requested
     print subnets   # output requested and printed
-    subnetwork_address += number_of_ips_per_subnet # sets up to display all subnets in the range starting at 144.174.11.0
+    subnetwork_address += number_of_ips_per_subnet # sets up to display all subnets in the range starting at 144.174.x.0
 
 
  
